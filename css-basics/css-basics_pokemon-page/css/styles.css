@@ -58,10 +58,8 @@ section {
   background-color: white;
   padding: 20px;
   margin: 10px;
-  border-style: solid;
-  border-right: 5px;
-  border-top: 5px;
-  border-bottom: 5px;
+  border-left: solid;
+  border-width: 5px;
   border-color: orange;
 }
 
@@ -76,7 +74,20 @@ section {
 */
 
 .subtitle {
+  border-left: solid;
+  border-right: solid;
+  border-width: 3px;
+  border-color: gold;
+  display: inline;
+  padding: 5px;
+
   /* your solution */
+}
+
+.favourites.subtitle {
+  border-left: solid;
+  border-color: orange;
+  border-width: 3px;
 }
 
 /* ------- List ------- */
