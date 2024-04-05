@@ -9,7 +9,7 @@
   --color-primary: #8236ffff;
   --color-white: #ffffff;
   --letter-spacing-small: 0.025em;
-  --border-radius-same: 4px;
+  --border-radius-base: 4px;
 }
 
 body {
@@ -66,7 +66,7 @@ figure {
   margin: 0;
   padding: 10px;
   background-color: var(--color-primary);
-  border-radius: var(--border-radius-same);
+  border-radius: var(--border-radius-base);
 }
 
 figcaption {
@@ -83,7 +83,7 @@ a {
   display: inline-block;
   font-size: smaller;
   padding: 8px;
-  border-radius: var(--border-radius-same);
+  border-radius: var(--border-radius-base);
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -97,7 +97,7 @@ a:focus-visible {
 mark {
   background-color: var(--color-primary);
   color: var(--color-white);
-  border-radius: var(--border-radius-same);
+  border-radius: var(--border-radius-base);
   letter-spacing: var(--letter-spacing-small);
 }
 
