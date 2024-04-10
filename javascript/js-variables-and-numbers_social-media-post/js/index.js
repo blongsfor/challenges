@@ -25,4 +25,10 @@ const isReported = true;
 
 // --v-- write your code here --v--
 
+console.log("Title is: ", title);
+console.log("Text is: ", text);
+console.log("Number of Likes is: ", numberLikes);
+console.log("User created the post: ", userCreatingPost);
+console.log("is reported: ", isReported);
+
 // --^-- write your code here --^--
