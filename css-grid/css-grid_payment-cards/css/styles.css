@@ -44,6 +44,9 @@ body {
   display: grid;
 
   /* Add styles to the container */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
 }
 
 .cards__option {
