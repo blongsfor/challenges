@@ -27,7 +27,7 @@ const isReported = true;
 
 console.log("Title is: ", title);
 console.log("Text is: ", text);
-console.log("Number of Likes is: ", numberLikes);
+console.log("Number of Likes is: ", numberLikes + 1);
 console.log("User created the post: ", userCreatingPost);
 console.log("is reported: ", isReported);
 
