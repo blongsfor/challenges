@@ -27,18 +27,26 @@ subtractButton.addEventListener("click", () => {
 
 multiplyButton.addEventListener("click", () => {
   // 3. Multiply the two operands and store the result in a variable. Log the variable's value to the console.
+  let multiply = operand1 * operand2;
+  console.log(multiply);
 });
 
 divideButton.addEventListener("click", () => {
   // 4. Divide the two operands and store the result in a variable. Log the variable's value to the console.
+  let division = operand1 / operand2;
+  console.log(division);
 });
 
 exponentButton.addEventListener("click", () => {
   // 5. Raise "operand1" to the value of "operand2" and store the result in a variable. Log the variable's value to the console.
+  let exponent = Math.pow(operand1, operand2);
+  console.log(exponent);
 });
 
 moduloButton.addEventListener("click", () => {
   // 6. Calculate the remainder when dividing "operand1" by "operand2" and store the result in a variable. Log the variable's value to the console.
+  let modulo = (operand1 / operand2) % 2;
+  console.log(modulo);
 });
 
 /*
@@ -65,24 +73,36 @@ const divideByTwoButton = document.querySelector('[data-js="divide-by-two"]');
 
 increaseByOneButton.addEventListener("click", () => {
   // 7. Increase the value of "operand1" by 1. Log the new value to the console.
+  let increaseByOne = operand1 + 1;
+  console.log(increaseByOne);
 });
 
 increaseByFiveButton.addEventListener("click", () => {
   // 8. Increase the value of "operand1" by 5. Log the new value to the console.
+  let increaseByFive = operand1 + 5;
+  console.log(increaseByFive);
 });
 
 decreaseByOneButton.addEventListener("click", () => {
   // 7. Decrease the value of "operand1" by 1. Log the new value to the console.
+  let decreaseByOne = operand1 - 1;
+  console.log(decreaseByOne);
 });
 
 decreaseByFiveButton.addEventListener("click", () => {
   // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
+  let decreaseByFive = operand1 - 5;
+  console.log(decreaseByFive);
 });
 
 multiplyByTwoButton.addEventListener("click", () => {
   // 11. Multiply the value of "operand1" by 2. Log the new value to the console.
+  let multiplyByTwo = operand1 * 2;
+  console.log(multiplyByTwo);
 });
 
 divideByTwoButton.addEventListener("click", () => {
   // 12. Divide the value of "operand1" by 2. Log the new value to the console.
+  let divideByTwo = operand1 / 2;
+  console.log(divideByTwo);
 });
