@@ -5,19 +5,17 @@ Rewrite the following functions as arrow functions.
 Use implicit returns when possible
 */
 
-function getCurrentHour() {
+const getCurrentHour = () => {
   const now = new Date();
   const currentHour = now.getHours();
-  if (currentHour === 0) {
-    return "12am";
-  } else if (currentHour === 12) {
-    return "12pm";
-  } else if (currentHour <= 11) {
-    return currentHour + "am";
-  } else {
-    return currentHour - 12 + "pm";
-  }
-}
+  return currentHour === 0
+    ? "12am"
+    : currentHour === 12
+    ? "12pm"
+    : currentHour <= 11
+    ? "${currentHour}am"
+    : "${currentHour -12}pm";
+};
 
 function getVectorLength(x, y, z) {
   return (x ** 2 + y ** 2 + z ** 2) ** 0.5;
