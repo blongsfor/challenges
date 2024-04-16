@@ -9,4 +9,8 @@ form.addEventListener("submit", (event) => {
   const data = Object.fromEntries(formData);
 
   console.log(data);
+
+  const ageBadnessSum = Number(data.age) + Number(data.badness);
+
+  console.log(ageBadnessSum);
 });
