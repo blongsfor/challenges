@@ -1,5 +1,5 @@
 import { cards } from "../global.js";
-import { Card } from
+import { Card } from "../Card/Card.js";
 
 export function Form() {
   const form = document.createElement("form");
