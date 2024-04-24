@@ -5,7 +5,7 @@ import { Result } from "./components/Result/Result.js";
 import { getMaxCount } from "./utils/symbols.js";
 
 console.clear();
-console.log("hello");
+
 const root = document.body;
 
 // Assemble the machine… (nothing to change here)
