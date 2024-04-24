@@ -62,7 +62,7 @@ spinButton.addEventListener("click", async () => {
    * and make sure it is always executed after the wheels have stopped,
    * even if an error was thrown.
    */
-
+  Promise.all(wheel1.spin(), wheel2.spin(), wheel3.spin());
   spinButton.disabled = false;
 });
 
