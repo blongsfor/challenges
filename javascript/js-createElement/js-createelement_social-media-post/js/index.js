@@ -1,5 +1,5 @@
 console.clear();
-
+console.log("hello");
 function handleLikeButtonClick(event) {
   const buttonElement = event.target;
   buttonElement.classList.toggle("post__button--liked");
