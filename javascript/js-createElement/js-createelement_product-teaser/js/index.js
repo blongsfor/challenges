@@ -1,6 +1,6 @@
 console.clear();
 
-const name = "Queen angelfish";
+const fishname = "Queen angelfish";
 const description =
   "With their bright colors and deep, laterally compressed bodies, marine angelfishes are some of the more conspicuous residents of the aquarium. The queen angelfish grows to be 45 cm. With neon blue and yellow scales and iridescent purple and orange markings, surprisingly it is not conspicuous, and actually hides very well, and is very shy.";
 const category1 = "Freshwater";
@@ -10,48 +10,41 @@ const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
-const newSection = document.createElement("article");
-newSection.classList.add("product");
+const article = document.createElement("article");
+const body = document.querySelector("body");
 
-const productBodyDiv = document.createElement("div");
-productBodydiv.classList.add("product__body");
+article.innerHTML = `
+ <article class="product">
+      <div class="product__body">
+        <div class="product__text-container">
+          <h2 class="product__name">${fishname}</h2>
+          <ul class="product__categories">
+            <li class="product__category">${category1}</li>
+            <li class="product__category">${category2}</li>
+            <li class="product__category">${category3}</li>
+          </ul>
+          <p class="product__description">
+            Anemonefish are omnivorous and can feed on undigested food from
+            their host anemones. When a sea anemone is not available in an
+            aquarium, the anemonefish may settle in some varieties of soft
+            corals, or large polyp stony corals.
+          </p>
+        </div>
+        <div class="product__image-container">
+          <img
+            class="product__image"
+            src="${imageSrc}"
+          />
+        </div>
+      </div>
+      <footer class="product__footer">
+        <span class="product__price">${price}</span>
+        <button type="button" class="product__buy-button">Buy</button>
+      </footer>
+    </article>
+`;
 
-const productTextContainerDiv = document.createElement("div");
-productTextContainerDiv.classList.add("product__text-container");
+body.appendChild(article);
 
-const productNameHeadline = document.createElement("h2");
-productNameHeadline.classList.add("product__name");
-productNameHeadline.textContent = "Clownfish";
-
-const productCategoriesUl = document.createElement("ul");
-productCategoriesUl.classList.add("product__categories");
-
-const productCategoryLi = document.createElement("li");
-productCategoryLi.classList.add("product__category");
-productCategoryLi.textContent = "warmes Wasser";
-
-const productDescriptionParagraph = document.createElement("p");
-productDescriptionParagraph.classList.add("product__description");
-productDescriptionParagraph.textContent = "alles für die Fische";
-
-const productImageContainer = document.createElement("div");
-productImageContainer.classList.add("product__image-container");
-
-const productImage = document.createElement("img");
-productImage.classList.add("product__image");
-productImage.src =
-  "https://unsplash.com/de/fotos/orange-und-weisse-clownfische-x9yfTxHpj5w";
-
-const footer = document.createElement("footer");
-footer.classList.add("product__footer");
-
-const footerSpan = document.createElement("span");
-footerSpan.classList.add("product__price");
-footerSpan.textContent = "14€";
-
-const button = document.createElement("button");
-button.classList.add("product__buy-button");
-
-document.body.append(newSection);
-newSection.append(productBodyDiv);
-newSection.append();
+const buyButton = article.querySelector("button");
+buyButton.addEventListener("click", () => console.log(fishname, price));
