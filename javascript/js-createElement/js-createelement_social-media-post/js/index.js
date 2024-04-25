@@ -11,12 +11,12 @@ likeButton.addEventListener("click", handleLikeButtonClick);
 // Exercise:
 // Use document.createElement() and append another social media post to the body.
 
-const newSocialMediaPost = document.createElement("section");
-newSocialMediaPost.classList.add("post");
+const newSocialMediaPostSection = document.createElement("section");
+newSocialMediaPostSection.classList.add("post");
 
-const newSocialmediaPost = document.createElement("p");
-newSocialmediaPost.textContent = "Please like, share and subscribe :)";
-newSocialmediaPost.classList.add("post__content");
+const newSocialMediaPost = document.createElement("p");
+newSocialMediaPost.textContent = "Please like, share and subscribe";
+newSocialMediaPost.classList.add("post__content");
 
 const newFooter = document.createElement("footer");
 newFooter.classList.add("post__footer");
@@ -28,8 +28,10 @@ newSpan.classList.add("post__username");
 const newButton = document.createElement("button");
 newButton.textContent = "♥ Like";
 newButton.classList.add("post__button");
+newButton.addEventListener("click", handleLikeButtonClick);
 
-newFooter.append(newSpan, newButton);
-newSection.append(newSocialmediaPost, newFooter);
-
-document.body.append(newSection);
+document.body.append(newSocialMediaPostSection);
+newSocialMediaPostSection.append(newSocialMediaPost);
+newSocialMediaPostSection.append(newFooter);
+newSocialMediaPostSection.append(newSpan);
+newSocialMediaPostSection.append(newButton);
