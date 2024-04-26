@@ -47,10 +47,8 @@ async function fetchDataAndRender() {
   console.log(data);
   return data;
 }
-
-results.forEach((result) => {
+const newCards = results.forEach((result) => {
   Card(result);
   renderElement(result);
 });
-
-fetch(); // ?
+fetch();
