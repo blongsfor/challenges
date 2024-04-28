@@ -98,6 +98,8 @@ const array1 = [3, 6, 1];
 const array2 = [8, 5, 2];
 export function mergeAndSortArrays(array1, array2) {
   // write your code here
+  const sortedNumbers = [...array1, ...array2].sort();
+  return sortedNumbers;
 }
 const mergedAndSorted = mergeAndSortArrays(array1, array2);
 console.log(mergedAndSorted); // Should log [1, 2, 3, 5, 6, 8]
