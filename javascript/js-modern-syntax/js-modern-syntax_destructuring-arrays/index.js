@@ -55,7 +55,7 @@ console.log(student1, student2, student3, student4, student5);
 
 const values = [1, 6, 7, 9, 12, 5, 4];
 
-const result = add(1); // Spread values inside this function call
+const result = add(...values); // Spread values inside this function call
 
 function add(...values) {
   return values.reduce(
@@ -63,6 +63,7 @@ function add(...values) {
   );
 }
 
+console.log(result);
 // EXERCISE 7
 // Write a function reverseArrayWithoutMutating that takes an array as an argument and returns a new array containing all of the items that are in the array that was passed in but in reverse order.
 // This function should:
@@ -76,7 +77,9 @@ function add(...values) {
 
 const arr = [1, 2, 3];
 export function reverseArrayWithoutMutating(arr) {
-  // write your code here
+  const [value1, value2, value3] = arr;
+  const reverseValues = [value3, value2, value1];
+  return reverseValues;
 }
 const reverseArr = reverseArrayWithoutMutating(arr);
 console.log(reverseArr); // Should log [3, 2, 1] without altering arr
