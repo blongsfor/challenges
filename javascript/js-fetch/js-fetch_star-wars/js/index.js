@@ -47,8 +47,9 @@ async function fetchDataAndRender() {
   console.log(data);
   return data;
 }
-const newCards = results.forEach((result) => {
-  Card(result);
-  renderElement(result);
+const fetchedCharacters = await fetchDataAndRender();
+fetchedCharacters.results.forEach((character) => {
+  renderElement(Card(character));
 });
+
 fetch();
