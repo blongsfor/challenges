@@ -6,6 +6,10 @@ console.clear();
 
 const item = ["Egg", 0.25, 12];
 
+const [name, price, quantity] = item;
+
+console.log(name, price, quantity);
+
 // example: export const [value1, value2] = array;
 
 // EXERCISE 2
@@ -13,11 +17,19 @@ const item = ["Egg", 0.25, 12];
 
 const personChris = [12, "Chris", "Owen"];
 
+const [firstNameOfChris, lastNameOfChris, ageOfChris] = personChris;
+
+console.log(firstNameOfChris, lastNameOfChris, ageOfChris);
+
 // EXERCISE 3
 // Use array destructuring to extract the variables "firstNameOfAlex" and "lastNameOfAlex".
 // Make sure not to have unused variables.
 
 const personAlex = ["Alex", 12, "Main"];
+
+const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
+
+console.log(firstNameOfAlex, lastNameOfAlex);
 
 // EXERCISE 4
 // Use array destructuring to extract the last name from the array
@@ -46,7 +58,7 @@ function add(...values) {
 }
 
 // EXERCISE 7
-// Write a function reverseArrayWithoutMutating that takes an array as an argument and returns a new array containing all of the items that are in the array that was passed in but in reverse order. 
+// Write a function reverseArrayWithoutMutating that takes an array as an argument and returns a new array containing all of the items that are in the array that was passed in but in reverse order.
 // This function should:
 
 // Leave the original array unchanged.
@@ -64,9 +76,8 @@ const reverseArr = reverseArrayWithoutMutating(arr);
 console.log(reverseArr); // Should log [3, 2, 1] without altering arr
 console.log(arr); // Should still log [1, 2, 3]
 
-
 // EXERCISE 8
-// Develop a function mergeAndSortArrays that takes two arrays of numbers as arguments and returns a new array that is the result of merging the two arrays and sorting the elements in ascending order. 
+// Develop a function mergeAndSortArrays that takes two arrays of numbers as arguments and returns a new array that is the result of merging the two arrays and sorting the elements in ascending order.
 // (Hint: the sort method we've seen the other day comes in handy here)
 // The function should:
 
