@@ -13,6 +13,10 @@ const person = {
   phone: "12345",
 };
 
+const { age, ...contact } = person;
+console.log(age);
+console.log(contact);
+
 // example: export const {value 1} = myObject;
 
 // EXERCISE 2
@@ -20,6 +24,11 @@ const person = {
 // all other items should go into a variable called "restOfList".
 
 const list = ["one", "two", "three", "four", "five"];
+
+const [first, second, ...restOfList] = list;
+console.log(first);
+console.log(second);
+console.log(restOfList);
 
 // EXERCISE 3
 // a) The `add` function does not work because it needs an array as argument.
