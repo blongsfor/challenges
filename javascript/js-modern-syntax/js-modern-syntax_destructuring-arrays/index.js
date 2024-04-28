@@ -37,11 +37,17 @@ console.log(firstNameOfAlex, lastNameOfAlex);
 
 const students = ["Christina", "Jon", "Alexandare"];
 
+const [, , lastName] = students;
+console.log(lastName);
 // EXERCISE 5
 // Use array destructuring to extract all of the names from this nested array.
 // Assign the given order of students to variables called "student1" to "student5".
 
 const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
+
+const [student1, [student2, student3], [student4, student5]] = nestedStudents;
+
+console.log(student1, student2, student3, student4, student5);
 
 // EXERCISE 6
 // Spread the values of the values array into the function call of the add function.
