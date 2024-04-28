@@ -50,7 +50,9 @@ console.log(add(sum));
 // c) Make sure you understand what the spread syntax does here.
 
 const numbers = [3, 2, 1];
-export const result = add(numbers);
+export const result = add(...numbers);
+
+console.log(result);
 
 // EXERCISE 5
 // a) Create a variable `allFruits` which contains `anotherFruit` and `fruits`
@@ -60,3 +62,6 @@ export const result = add(numbers);
 
 const fruits = ["apple", "banana", "orange", "papaya"];
 const anotherFruit = "cherry";
+const allFruits = [...fruits, anotherFruit];
+
+console.log(allFruits);
