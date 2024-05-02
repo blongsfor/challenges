@@ -97,7 +97,7 @@ console.log("Animal with Name longer 5", indexOfAnimalWithNameLongerFive);
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
-const animalsSortedAlphabetically = animals.sort((a, b) => {
+const animalsSortedAlphabetically = animals.slice().sort((a, b) => {
   const animalA = a.name;
   const animalB = b.name;
   if (animalA < animalB) {
