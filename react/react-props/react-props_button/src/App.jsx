@@ -1,10 +1,20 @@
 import "./App.css";
 
 export default function App() {
-  return <Button text="test" color={"#FF0000"} disabled={false} />;
+  function handleClick() {
+    console.log("Dont touch me");
+  }
+  return (
+    <Button
+      text="test"
+      color={"#FF0000"}
+      disabled={false}
+      onClick={handleClick}
+    />
+  );
 }
 
-function Button({ color, disabled, text }) {
+function Button({ color, disabled, text, onClick }) {
   return (
     <button
       style={{
@@ -12,6 +22,7 @@ function Button({ color, disabled, text }) {
         width: "200px",
         color: color,
       }}
+      onClick={onClick}
     >
       {text} {disabled}
     </button>
