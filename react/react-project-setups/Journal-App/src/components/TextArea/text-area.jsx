@@ -1,3 +1,8 @@
 export function TextArea() {
-  return <textarea className="text-area__notes"></textarea>;
+  return (
+    <>
+      <label htmlFor="text-area__title">Notes</label>
+      <textarea className="text-area__notes"></textarea>
+    </>
+  );
 }

@@ -1,3 +1,13 @@
+import { TextArea } from "../TextArea/text-area";
+import { Button } from "../Button/button";
+import { Input } from "../Input/input.jsx";
+
 export function EntryForm() {
-  return <input className="entry-form__headline" inputMode="text"></input>;
+  return (
+    <>
+      <Input></Input>
+      <TextArea></TextArea>
+      <Button></Button>
+    </>
+  );
 }
