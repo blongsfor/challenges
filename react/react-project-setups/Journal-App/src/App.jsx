@@ -8,7 +8,7 @@ import { Entries } from "./components/Entries/entries.jsx";
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <EntryForm />
       <Entries></Entries>
       <Footer></Footer>
