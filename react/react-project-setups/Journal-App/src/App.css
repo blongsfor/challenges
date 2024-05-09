@@ -42,3 +42,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.tab-bar__section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
