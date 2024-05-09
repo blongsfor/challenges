@@ -1,3 +1,4 @@
+import { useState } from "react";
 import star from "../assets/star.svg";
 import unstar from "../assets/unstar.svg";
 
@@ -13,3 +14,11 @@ export function Entry({ date, title, text }) {
     </>
   );
 }
+
+/*
+let [star, setStar] = useState(star);
+
+function handleclick({ bookmark }) {
+  setStar(bookmark);
+}
+*/
