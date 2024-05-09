@@ -61,7 +61,11 @@
 }
 
 .entry {
-  border: solid black;
+  border-bottom: solid red;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 5px;
 }
 
 header {
@@ -97,13 +101,13 @@ footer {
 }
 
 .input-text__div {
-  padding: 15px;
+  margin: 15px;
   display: flex;
   justify-content: space-around;
 }
 
 .input-notes__div {
-  padding: 15px;
+  margin: 15px;
   display: flex;
   justify-content: space-around;
 }
@@ -131,4 +135,12 @@ footer {
 
 #input-text {
   width: 100%;
+}
+
+button {
+  width: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin: 10px;
 }
