@@ -2,7 +2,7 @@ export function EntryForm() {
   return (
     <>
       <h2>New Entry</h2>
-      <form>
+      <form className="entry-form">
         <div className="input-text__div">
           <label htmlFor="input-text__title">Motto</label>
           <input id="input-text" name="input-text" required></input>
