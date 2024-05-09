@@ -144,3 +144,11 @@ button {
   justify-content: center;
   margin: 10px;
 }
+
+.bookmark-image {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 300px;
+}
