@@ -47,13 +47,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 5px;
 }
 
 .tab {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 10px;
   border: solid red;
+  width: 10em;
+  margin: 5px;
 }
 
 .entry {
@@ -84,4 +88,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.count-number {
+  border: solid orange;
+  border-radius: 50%;
+  background-color: orange;
 }
