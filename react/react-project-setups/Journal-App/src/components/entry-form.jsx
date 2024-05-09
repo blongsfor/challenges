@@ -1,7 +1,7 @@
 export function EntryForm() {
   return (
     <>
-      <h2>New Entry</h2>
+      <h2 className="entryform-heading">New Entry</h2>
       <form className="entry-form">
         <div className="input-text__div">
           <label htmlFor="input-text__title">Motto</label>
