@@ -15,10 +15,10 @@ export function Entry({ date, title, text }) {
   );
 }
 
-/*
-let [star, setStar] = useState(star);
+/* let [star, setStar] = useState(false);
 
 function handleclick({ bookmark }) {
-  setStar(bookmark);
+  setStar(!star);
+  
 }
 */
