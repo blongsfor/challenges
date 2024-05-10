@@ -1,9 +1,14 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
-  let code = "?";
+  let [code, setCode] = useState("?");
 
   const validCode = "🐡🐠🐋";
+
+  function handleClick(animal) {
+    setCode(animal);
+  }
 
   return (
     <div className="container">
@@ -11,7 +16,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            handleClick("🐡");
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -21,7 +26,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            handleClick("🐋");
           }}
         >
           <span role="img" aria-label="Whale">
@@ -31,7 +36,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            handleClick("🐠");
           }}
         >
           <span role="img" aria-label="Clownfish">
@@ -43,7 +48,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
-          console.log("Reset Code!");
+          handleClick("?");
         }}
       >
         Reset
