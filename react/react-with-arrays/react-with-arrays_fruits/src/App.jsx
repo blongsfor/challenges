@@ -3,7 +3,7 @@ import "./App.css";
 
 export default function App() {
   const fruits = [
-    { id: "1", name: "watermelon 🍉", color: "green, red, seeds" },
+    { id: "1", name: "watermelon 🍉", color: "white" },
     { id: "2", name: "orange 🍊", color: "orange" },
     { id: "3", name: "apple 🍎", color: "red" },
     { id: "4", name: "raspberry ", color: "pink" },
