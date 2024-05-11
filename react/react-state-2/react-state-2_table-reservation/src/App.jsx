@@ -15,8 +15,10 @@ export default function App() {
   return (
     <div className="container">
       <h1>Place a Table Reservation</h1>
-      <Counter onhandlePlus={handlePlus} onhandleMinus={handleMinus} />
-      <p>You are going to reserve a table for 2 people.</p>
+      <Counter onhandlePlus={handlePlus} onhandleMinus={handleMinus}>
+        {people}
+      </Counter>
+      <p>You are going to reserve a table for {people} people.</p>
     </div>
   );
 }
