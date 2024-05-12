@@ -7,7 +7,9 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    event.target.reset();
     const form = event.target;
+
     const nameValue = form.elements.name.value;
     console.log("name is: ", name);
     const emailValue = form.elements.email.value;
