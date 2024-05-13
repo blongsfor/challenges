@@ -20,7 +20,8 @@ export default function App() {
   useEffect(() => {
     getISSCoords();
   }, []);
-  console.log("coords: ", coords);
+
+  //setInterval(getISSCoords, 5000);
 
   return (
     <main>
