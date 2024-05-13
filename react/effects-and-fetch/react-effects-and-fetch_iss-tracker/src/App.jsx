@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Controls from "./components/Controls";
 import Map from "./components/Map";
 import "./App.css";
@@ -11,7 +11,16 @@ export default function App() {
     latitude: 0,
   });
 
-  async function getISSCoords() {}
+  async function getISSCoords() {
+    const response = await fetch(URL);
+    const coordinates = await response.json();
+    setCoords(coordinates);
+  }
+
+  useEffect(() => {
+    getISSCoords();
+  }, []);
+  console.log("coords: ", coords);
 
   return (
     <main>
