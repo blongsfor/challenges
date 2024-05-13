@@ -150,6 +150,7 @@ button {
   width: 30px;
   height: 30px;
   position: relative;
+  align-self: flex-end;
 }
 
 .entryform-heading {
