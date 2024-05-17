@@ -19,8 +19,8 @@ export default function HomePage() {
                     <Image
                       src={`${volume.cover}`}
                       alt={volume.title}
-                      width={450}
-                      height={326}
+                      width={326}
+                      height={450}
                     />
                     <h3>{volume.title}</h3>
                   </div>
