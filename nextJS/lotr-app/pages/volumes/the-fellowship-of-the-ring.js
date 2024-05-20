@@ -15,8 +15,8 @@ export default function fellowship() {
       <Image
         src={`${volume.cover}`}
         alt={volume.title}
-        width={326}
-        height={450}
+        width={140}
+        height={230}
       />
     </>
   );
