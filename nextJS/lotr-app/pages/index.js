@@ -15,25 +15,17 @@ export default function HomePage() {
         <p>{introduction}</p>
         <h2>All Volumes</h2>
         <ul>
-          <li>
-            {volumes.map((volume) => {
-              return (
-                <>
-                  <Link href={`./volumes/${volume.slug}`} key={volume.slug}>
-                    <div>
-                      <Image
-                        src={`${volume.cover}`}
-                        alt={volume.title}
-                        width={326}
-                        height={450}
-                      />
-                      <h3>{volume.title}</h3>
-                    </div>
-                  </Link>
-                </>
-              );
-            })}
-          </li>
+          {volumes.map((volume) => {
+            return (
+              <>
+                <Link href={`./volumes/${volume.slug}`} key={volume.slug}>
+                  <li>
+                    <h3>{volume.title}</h3>
+                  </li>
+                </Link>
+              </>
+            );
+          })}
         </ul>
       </div>
     </>
