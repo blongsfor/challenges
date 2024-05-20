@@ -10,6 +10,15 @@ export default function fellowship() {
       <Link href="../">← All Volumes</Link>
       <h1>{volume.title}</h1>
       <p>{volume.description}</p>
+      <ul>
+        {volume.books.map((book) => {
+          return (
+            <li key={book.title}>
+              {book.ordinal}: {book.title}
+            </li>
+          );
+        })}
+      </ul>
       <Image
         src={`${volume.cover}`}
         alt={volume.title}

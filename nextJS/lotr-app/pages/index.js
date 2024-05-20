@@ -1,7 +1,6 @@
 import { introduction } from "../resources/lib/data";
 import Link from "next/link";
 import { volumes } from "../resources/lib/data.js";
-import Image from "next/image";
 import Head from "next/head";
 
 export default function HomePage() {
