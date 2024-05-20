@@ -18,13 +18,16 @@ export default function fellowship() {
             </li>
           );
         })}
+
+        <Image
+          src={`${volume.cover}`}
+          alt={volume.title}
+          width={140}
+          height={230}
+        />
+        <Link href="the-fellowship-of-the-ring">Previous Book</Link>
+        <Link href="the-return-of-the-king">Next Book</Link>
       </ul>
-      <Image
-        src={`${volume.cover}`}
-        alt={volume.title}
-        width={140}
-        height={230}
-      />
     </>
   );
 }
