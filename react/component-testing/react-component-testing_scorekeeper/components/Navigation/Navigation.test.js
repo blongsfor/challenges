@@ -10,7 +10,7 @@ jest.mock("next/router", () => ({
 
 test("renders with two links 'Play' and 'History'", () => {
   render(<Navigation />);
-  const playLink = screen.getByRole("link", { name: /play/i }); // /i damit case-sensitivity egal ist
+  const playLink = screen.getByRole("link", { name: /play/i }); // /i  case-sensitivity doenst matter then
   const historyLink = screen.getByRole("link", { name: /history/i });
   expect(playLink).toBeInTheDocument();
   expect(historyLink).toBeInTheDocument();
