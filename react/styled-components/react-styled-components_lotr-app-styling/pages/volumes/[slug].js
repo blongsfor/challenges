@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { volumes } from "../../lib/data";
+import { GlobalStyle } from "@/styles";
 
 export default function VolumeDetail() {
   const router = useRouter();
@@ -21,6 +22,7 @@ export default function VolumeDetail() {
 
   return (
     <>
+      <GlobalStyle />
       <Link href="/volumes">← All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
