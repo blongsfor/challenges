@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Light from "../Light";
+import Light from "../Light/Light";
 
 const StyledLights = styled.ul`
   list-style-type: none;
@@ -11,12 +11,13 @@ const StyledLights = styled.ul`
   justify-content: center;
 `;
 
-export default function Lights({ allLights }) {
+export default function Lights({ lights }) {
+  console.log("lights", lights);
   return (
     <StyledLights>
-      {allLights.map((light) => (
+      {lights.map((light) => (
         <li key={light.id}>
-          <light name={light} />
+          <Light name={light.name} />
         </li>
       ))}
     </StyledLights>
