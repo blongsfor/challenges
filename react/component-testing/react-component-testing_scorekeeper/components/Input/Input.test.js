@@ -4,13 +4,18 @@ import Input from ".";
 import "@testing-library/jest-dom/extend-expect";
 
 test("renders a label and an input with the correct attributes", () => {
-  render(<label />);
-  const nameLabel = screen.getByLabelText("Name of game");
+  render(<label htmlFor="nameOfGame" />);
+  const nameLabel = screen.getByLabelText("nameOfGame");
   expect(nameLabel).toBeInTheDocument();
+  const labelElement = screen.getByLabelText("nameOfGame");
+  expect(labelElement).toHaveAttribute("for", "nameOfGame");
 
   render(<Input />);
-  const placeholderInput = screen.toHaveAttribute(placeholder, "e.g. Dodelido");
+  const placeholderInput = screen.getByPlaceholderText(
+    placeholder,
+    "e.g. Dodelido"
+  );
   expect(placeholderInput).toBeInTheDocument();
 });
 
-test("calls callback on every user input", async () => {});
+//test("calls callback on every user input", async () => {});
