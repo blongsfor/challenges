@@ -24,10 +24,31 @@ export default function App({ Component, pageProps }) {
     );
   }
 
+  const countLightsOn = allLights.filter(({ isOn }) => isOn).length;
+
+  function allOn() {
+    setAllLights((prevLights) =>
+      prevLights.map((light) => ({ ...light, isOn: true }))
+    );
+  }
+
+  function allOff() {
+    setAllLights((prevLights) =>
+      prevLights.map((light) => ({ ...light, isOn: false }))
+    );
+  }
+
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} allLights={allLights} onToggle={handleToggle} />
+      <Component
+        {...pageProps}
+        allLights={allLights}
+        onToggle={handleToggle}
+        countLightsOn={countLightsOn}
+        allOn={allOn}
+        allOff={allOff}
+      />
     </Layout>
   );
 }
