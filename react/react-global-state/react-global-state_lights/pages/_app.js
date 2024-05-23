@@ -16,6 +16,14 @@ export default function App({ Component, pageProps }) {
 
   const [allLights, setAllLights] = useState(inititalLights);
 
+  function handleToggle(id) {
+    setAllLights((prevLights) =>
+      prevLights.map((light) =>
+        light.id === id ? { ...light, isOn: !light.isOn } : light
+      )
+    );
+  }
+
   return (
     <Layout>
       <GlobalStyle />
