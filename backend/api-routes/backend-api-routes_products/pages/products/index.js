@@ -11,7 +11,7 @@ export default function AllListingsPage() {
     <>
       {data.map((product) => (
         <li key={product.id}>
-          <a href={`/products/${product.id}`}>{product.name}</a>
+          <p>{product.name}</p>
           <p>{product.description}</p>
         </li>
       ))}
