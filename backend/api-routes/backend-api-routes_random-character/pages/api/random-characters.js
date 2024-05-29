@@ -6,7 +6,8 @@ export default function handler(request, response) {
   const character = {
     firstName: chance.first(),
     lastName: chance.last(),
-    // ... some more keys here ...
+    geoHash: chance.geohash(),
+    twittername: chance.twitter(),
   };
   response.status(200).json(character);
 }
