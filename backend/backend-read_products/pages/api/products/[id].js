@@ -1,9 +1,9 @@
 import { products } from "../../../lib/products";
 
 export default function handler(request, response) {
-  const { id } = request.query;
+  const { _id } = request.query;
 
-  const product = products.find((product) => product.id === id);
+  const product = products.find((product) => product._id === _id);
 
   if (!product) {
     return response.status(404).json({ status: "Not Found" });
