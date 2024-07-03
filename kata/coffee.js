@@ -26,17 +26,21 @@
 
 function coffee(str) {
   const allWords = str.split(" ");
-  let coffeeWord = "coffee";
+  const coffeeWord = "coffee";
 
-  if (allWords.includes(coffeeWord)) {
-    allWords = allWords.map((word) => {
-      if (word === coffeeWord) {
-        return word.toUpperCase();
-      }
-    });
-
-    let newString = allWords.join(" ");
-
-    return newString;
+  for (let i = 0; i < allWords.length; i++) {
+    const word = allWords[i];
+    if (word.toLowerCase() === coffeeWord.toLowerCase()) {
+      allWords[i] = word.toUpperCase();
+    }
   }
+
+  return allWords.join(" ");
+}
+
+// doenst work because if the sentence includes a ! directly after a coffee it doesnt get split
+// instead its much easier with this:
+
+function coffee(str) {
+  return str.replace(/coffee/gi, "COFFEE"); // g for global and i for ignore casesensitivty
 }
